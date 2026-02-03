@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Canvas Interact</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+
+    <body>
+        <header class="toolbar">
+            <label>
+                Shape:
+                <select id="shape">
+                    <option value="circle">Circle</option>
+                    <option value="rect">Rectangle</option>
+                </select>
+            </label>
+
+            <label>
+                Size:
+                <input id="size" type="number" min="5" max="200" value="30" />
+            </label>
+
+            <label>
+                Speed:
+                <input id="speed" type="number" min="0" max="800" value="150" />
+            </label>
+
+            <label>
+                Color:
+                <input id="color" type="color" value="#1e88e5" />
+            </label>
+
+            <label title="Steers away before colliding">
+                <input id="avoid" type="checkbox" /> Avoidance
+            </label>
+
+            <label title="Physics bounce on collision">
+                <input id="resolve" type="checkbox" checked /> Resolve
+                Collisions
+            </label>
+
+            <button id="clear">Clear</button>
+        </header>
+
+        <main>
+            <canvas id="stage"></canvas>
+            <aside id="hud" class="hud"></aside>
+        </main>
+
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
