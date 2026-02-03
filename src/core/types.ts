@@ -1,4 +1,4 @@
-export type ShapeType = 'circle' | 'rect';
+export type ShapeType = 'circle' | 'rect' | 'square';
 
 export type RGBA = {r: number; g: number; b: number; a?: number};
 

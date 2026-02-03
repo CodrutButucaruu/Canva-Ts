@@ -1,7 +1,7 @@
 import {Scene} from '../core/scene';
 
 export type ControlsState = {
-    shape: 'circle' | 'rect';
+    shape: 'circle' | 'rect' | 'square';
     size: number;
     speed: number;
     color: string;

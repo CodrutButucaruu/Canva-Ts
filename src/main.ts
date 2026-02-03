@@ -32,8 +32,12 @@ canvas.addEventListener('click', (e) => {
     if (controls.state.shape === 'circle') {
         const r = controls.state.size;
         scene.add(new Circle(x, y, vx, vy, r, controls.state.color));
-    } else {
+    } else if (controls.state.shape === 'rect') {
         const w = controls.state.size * 1.6;
+        const h = controls.state.size;
+        scene.add(new Rect(x, y, vx, vy, w, h, controls.state.color));
+    } else {
+        const w = controls.state.size;
         const h = controls.state.size;
         scene.add(new Rect(x, y, vx, vy, w, h, controls.state.color));
     }
