@@ -1,7 +1,7 @@
 import {Scene} from '../core/scene';
 
 export type ControlsState = {
-    shape: 'circle' | 'rect' | 'square';
+    shape: 'circle' | 'rect';
     size: number;
     speed: number;
     color: string;
@@ -22,9 +22,9 @@ export class Controls {
         const clear = document.getElementById('clear') as HTMLButtonElement;
 
         this.state = {
-            shape: (shape.value as any) ?? 'circle',
+            shape: shape.value as any,
             size: Number(size.value) || 30,
-            speed: Number(speed.value) || 150,
+            speed: Number(speed.value) || 0,
             color: color.value || '#1e88e5',
             avoidance: avoid.checked,
             resolve: resolve.checked,

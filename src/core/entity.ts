@@ -13,6 +13,9 @@ export abstract class Entity implements Drawable, Updatable, Collidable {
     }
 
     abstract draw(ctx: CanvasRenderingContext2D): void;
+
+    abstract contains(p: Vector2): boolean;
+
     abstract radius(): number;
 
     update(dt: number): void {

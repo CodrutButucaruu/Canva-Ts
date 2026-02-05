@@ -9,6 +9,10 @@ export class Scene {
     entities: Entity[] = [];
     config: SceneConfig = {avoidance: false, resolve: true};
 
+    // drag(e: Entity) {
+    //     this.entities.push(e);
+    // }
+
     add(e: Entity) {
         this.entities.push(e);
     }
